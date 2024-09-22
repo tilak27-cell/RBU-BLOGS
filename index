@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html class="h-full antialiased" lang="en">
+    <head>
+        <meta charSet="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <meta property="og:image" content="https://jonbellah.com/images/share.png"/>
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:site_name" content="Jon Bellah"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@jonbellah"/>
+        <meta name="twitter:creator" content="@jonbellah"/>
+        <meta name="twitter:title" content="Jon Bellah"/>
+        <meta name="theme-color" content="#ffffff"/>
+        <link rel="icon" href="/images/favicon.ico" type="x-icon/image"/>
+        <link rel="manifest" href="/manifest.json"/>
+        <title>Jon Bellah</title>
+        <meta name="description" content="Jon is a software engineer, speaker, and occasional writer living in the beautiful city of Nashville, Tennessee."/>
+        <meta name="next-head-count" content="15"/>
+        <script>
+            let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+
+            updateMode()
+            darkModeMediaQuery.addEventListener('change', updateModeWithoutTransitions)
+            window.addEventListener('storage', updateModeWithoutTransitions)
+
+            function updateMode() {
+                let isSystemDarkMode = darkModeMediaQuery.matches
+                let isDarkMode = window.localStorage.isDarkMode === 'true' || (!('isDarkMode'in window.localStorage) && isSystemDarkMode)
+
+                if (isDarkMode) {
+                    document.documentElement.classList.add('dark')
+                } else {
+                    document.documentElement.classList.remove('dark')
+                }
+
+                if (isDarkMode === isSystemDarkMode) {
+                    delete window.localStorage.isDarkMode
+                }
+            }
+
+            function disableTransitionsTemporarily() {
+                document.documentElement.classList.add('[&_*]:!transition-none')
+                window.setTimeout( () => {
+                    document.documentElement.classList.remove('[&_*]:!transition-none')
+                }
+                , 0)
+            }
+
+            function updateModeWithoutTransitions() {
+                disableTransitionsTemporarily()
+                updateMode()
+            }
+        </script>
+        <link rel="alternate" type="application/rss+xml" href="https://jonbellah.com/rss.xml"/>
+        <link rel="preload" href="/_next/static/css/8cba0d6c88fa3ee6.css" as="style"/>
+        <link rel="stylesheet" href="/_next/static/css/8cba0d6c88fa3ee6.css" data-n-g=""/>
+        <noscript data-n-css=""></noscript>
+        <script defer="" nomodule="" src="/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js"></script>
+        <script src="/_next/static/chunks/webpack-6ef43a8d4a395f49.js" defer=""></script>
+        <script src="/_next/static/chunks/framework-19f3649580393c10.js" defer=""></script>
+        <script src="/_next/static/chunks/main-022784a43a0fcb3f.js" defer=""></script>
+        <script src="/_next/static/chunks/pages/_app-3cedab67845d1364.js" defer=""></script>
+        <script src="/_next/static/chunks/577-74fd85862f9c05bc.js" defer=""></script>
+        <script src="/_next/static/chunks/93-ed450e20e76b3b5c.js" defer=""></script>
+        <script src="/_next/static/chunks/pages/index-b42f94e5dbae5167.js" defer=""></script>
+        <script src="/_next/static/g02EWMu72aCr_H7Qjhru5/_buildManifest.js" defer=""></script>
+        <script src="/_next/static/g02EWMu72aCr_H7Qjhru5/_ssgManifest.js" defer=""></script>
+    </head>
+    <body class="flex h-full flex-col bg-slate-50 dark:bg-[#060d1f]">
+        <div id="__next">
+            <div class="bg-gradient-to-r from-blue-500 via-indigo-500 to-emerald-500 blur-[50px] md:blur-[90px] rounded-full w-[400px] h-[300px] md:w-[800px] md:h-[550px] rotate-[55deg] fixed left-8 top-12 opacity-[.20]"></div>
+            <div class="fixed inset-0 flex justify-center sm:px-8">
+                <div class="flex w-full max-w-7xl lg:px-8">
+                    <div class="w-full bg-white ring-1 ring-slate-100 dark:bg-slate-900/60 dark:ring-slate-300/20"></div>
+                </div>
+            </div>
+            <div class="relative flex flex-col min-h-screen">
+                <header class="pointer-events-none relative z-50 flex flex-col" style="height:var(--header-height);margin-bottom:var(--header-mb)">
+                    <div class="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"></div>
+                    <div class="sm:px-8 top-0 order-last -mb-3 pt-3" style="position:var(--header-position)">
+                        <div class="mx-auto max-w-7xl lg:px-8">
+                            <div class="relative px-4 sm:px-8 lg:px-12">
+                                <div class="mx-auto max-w-2xl lg:max-w-5xl">
+                                    <div class="top-[var(--avatar-top,theme(spacing.3))] w-full" style="position:var(--header-inner-position)">
+                                        <div class="relative">
+                                            <div class="absolute left-0 top-2.5 origin-left transition-opacity rounded-tl-[14px] rounded-br-[14px] w-10 h-10 flex items-center justify-center bg-white/90 px-1 py-0.5 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-slate-800/90 dark:ring-white/10" style="opacity:var(--avatar-border-opacity, 0);transform:var(--avatar-border-transform)"></div>
+                                            <a aria-label="Home" class="block h-16 w-16 origin-left pointer-events-auto" style="transform:var(--avatar-image-transform)" href="/">
+                                                <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-slate-800 dark:text-slate-400 dark:hover:text-blue-400 transition-colors duration-200 m-auto max-w-80 h-auto">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M80 0H24.08C17.07.92 9.89 3.7 5.35 9.34 2.25 13.03.66 17.72 0 22.44V80h55.891c5.879-.78 11.789-2.8 16.298-6.79C76.75 69.29 79.221 63.481 80 57.6V0ZM38.756 20.478H27.203V57.6h13.89c4.197 0 7.52-.949 9.967-2.845 2.445-1.898 3.668-4.537 3.668-7.922 0-2.385-.521-4.299-1.562-5.738s-2.738-2.422-5.091-2.946v-.254c1.725-.288 3.109-1.142 4.15-2.564 1.041-1.422 1.562-3.241 1.562-5.459 0-3.266-1.189-5.649-3.566-7.147-2.379-1.498-6.201-2.247-11.465-2.247Zm.888 14.701h-4.57v-8.252h4.139c2.25 0 3.897.308 4.938.927s1.562 1.638 1.562 3.06c0 1.523-.479 2.615-1.436 3.275-.955.66-2.5.99-4.633.99ZM35.074 51.1v-9.674h4.875c4.401 0 6.602 1.539 6.602 4.621 0 1.709-.517 2.979-1.549 3.809-1.033.828-2.633 1.244-4.799 1.244h-5.129Z" fill="currentColor"></path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-0 z-10 h-16 pt-6" style="position:var(--header-position)">
+                        <div class="sm:px-8 top-[var(--header-top,theme(spacing.6))] w-full" style="position:var(--header-inner-position)">
+                            <div class="mx-auto max-w-7xl lg:px-8">
+                                <div class="relative px-4 sm:px-8 lg:px-12">
+                                    <div class="mx-auto max-w-2xl lg:max-w-5xl">
+                                        <div class="relative flex gap-4">
+                                            <div class="flex flex-1"></div>
+                                            <div class="flex flex-1 justify-end md:justify-center">
+                                                <div class="pointer-events-auto md:hidden" data-headlessui-state="">
+                                                    <button class="group flex items-center rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-slate-800/90 dark:text-slate-200 dark:ring-white/10 dark:hover:ring-white/20" type="button" aria-expanded="false" data-headlessui-state="">
+                                                        Menu
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="ml-3 h-auto w-2 stroke-slate-500 group-hover:stroke-slate-700 dark:group-hover:stroke-slate-400">
+                                                            <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 01-1.06 0l-7.5-7.5a.75.75 0 011.06-1.06L12 14.69l6.97-6.97a.75.75 0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <nav class="pointer-events-auto hidden md:block">
+                                                    <ul class="flex rounded-full bg-white/90 px-3 text-sm font-medium text-slate-800 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur dark:bg-slate-800/60 dark:text-slate-200 dark:ring-white/10">
+                                                        <li>
+                                                            <a class="relative block px-3 py-2 transition duration-200 hover:text-blue-400 dark:hover:text-blue-400" href="/about">About</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="relative block px-3 py-2 transition duration-200 hover:text-blue-400 dark:hover:text-blue-400" href="/articles">Articles</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="relative block px-3 py-2 transition duration-200 hover:text-blue-400 dark:hover:text-blue-400" href="/projects">Projects</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="relative block px-3 py-2 transition duration-200 hover:text-blue-400 dark:hover:text-blue-400" href="/photography">Photography</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="relative block px-3 py-2 transition duration-200 hover:text-blue-400 dark:hover:text-blue-400" href="/uses">Uses</a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                            <div class="flex justify-end md:flex-1">
+                                                <div class="pointer-events-auto">
+                                                    <button type="button" aria-label="Toggle dark mode" class="group rounded-full bg-white/90 px-3 py-2 shadow-lg shadow-slate-800/5 ring-1 ring-slate-900/5 backdrop-blur transition dark:bg-slate-800/90 dark:ring-white/10 dark:hover:ring-white/20">
+                                                        <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="h-6 w-6 fill-slate-100 stroke-slate-500 transition group-hover:fill-slate-200 group-hover:stroke-slate-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-blue-50 [@media(prefers-color-scheme:dark)]:stroke-blue-500 [@media(prefers-color-scheme:dark)]:group-hover:fill-blue-50 [@media(prefers-color-scheme:dark)]:group-hover:stroke-blue-600">
+                                                            <path d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z"></path>
+                                                            <path d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061" fill="none"></path>
+                                                        </svg>
+                                                        <svg viewBox="0 0 24 24" aria-hidden="true" class="hidden h-6 w-6 fill-slate-700 stroke-slate-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-slate-400 [@media_not_(prefers-color-scheme:dark)]:fill-blue-400/10 [@media_not_(prefers-color-scheme:dark)]:stroke-blue-500">
+                                                            <path d="M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47ZM12.75 7C17 7 17 2.75 17 2.75S17 7 21.25 7C17 7 17 11.25 17 11.25S17 7 12.75 7Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div style="height:var(--content-offset)"></div>
+                <main class="flex-1">
+                    <div class="sm:px-8 mt-9">
+                        <div class="mx-auto max-w-7xl lg:px-8">
+                            <div class="relative px-4 sm:px-8 lg:px-12">
+                                <div class="mx-auto max-w-2xl lg:max-w-5xl">
+                                    <div class="max-w-2xl">
+                                        <h1 class="text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-100 sm:text-5xl">Entrepreneur, software engineer, and amateur photographer.</h1>
+                                        <p class="mt-6 text-base text-slate-600 dark:text-slate-400">Hi, I &#x27;m Jon Bellah. I &#x27;m a software engeering manager, entrepreneur, speaker, and occasional writer based in Nashville, Tennessee.</p>
+                                        <div class="mt-6 flex gap-6 items-center text-slate-400 dark:text-slate-500">
+                                            <a href="https://mastodon.social/@jonbellah" class="group -m-1 p-1 block cursor-pointer" rel="me">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" class="h-6 w-6 transition group-hover:text-blue-500">
+                                                    <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"></path>
+                                                </svg>
+                                            </a>
+                                            <a href="https://youtube.com/jonbellah" class="group -m-1 p-1 block cursor-pointer" rel="me">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 transition group-hover:text-blue-500">
+                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                    <path fill="currentColor" d="M19.606 6.995c-.076-.298-.292-.523-.539-.592C18.63 6.28 16.5 6 12 6s-6.628.28-7.069.403c-.244.068-.46.293-.537.592C4.285 7.419 4 9.196 4 12s.285 4.58.394 5.006c.076.297.292.522.538.59C5.372 17.72 7.5 18 12 18s6.629-.28 7.069-.403c.244-.068.46-.293.537-.592C19.715 16.581 20 14.8 20 12s-.285-4.58-.394-5.005zm1.937-.497C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5v-7l6 3.5-6 3.5z"></path>
+                                                </svg>
+                                            </a>
+                                            <a href="https://github.com/jonbellah" class="group -m-1 p-1 block cursor-pointer" rel="me">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 transition group-hover:text-blue-500">
+                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                    <path fill="currentColor" d="M5.883 18.653c-.3-.2-.558-.455-.86-.816a50.32 50.32 0 0 1-.466-.579c-.463-.575-.755-.84-1.057-.949a1 1 0 0 1 .676-1.883c.752.27 1.261.735 1.947 1.588-.094-.117.34.427.433.539.19.227.33.365.44.438.204.137.587.196 1.15.14.023-.382.094-.753.202-1.095C5.38 15.31 3.7 13.396 3.7 9.64c0-1.24.37-2.356 1.058-3.292-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.582c.081-.024.127-.035.208-.047.803-.123 1.937.17 3.415 1.096A11.731 11.731 0 0 1 12 3.315c.912 0 1.818.104 2.684.308 1.477-.933 2.613-1.226 3.422-1.096.085.013.157.03.218.05a1 1 0 0 1 .616.58c.487 1.216.52 2.297.302 3.19.691.936 1.058 2.045 1.058 3.293 0 3.757-1.674 5.665-4.642 6.392.125.415.19.879.19 1.38a300.492 300.492 0 0 1-.012 2.716 1 1 0 0 1-.019 1.958c-1.139.228-1.983-.532-1.983-1.525l.002-.446.005-.705c.005-.708.007-1.338.007-1.998 0-.697-.183-1.152-.425-1.36-.661-.57-.326-1.655.54-1.752 2.967-.333 4.337-1.482 4.337-4.66 0-.955-.312-1.744-.913-2.404a1 1 0 0 1-.19-1.045c.166-.414.237-.957.096-1.614l-.01.003c-.491.139-1.11.44-1.858.949a1 1 0 0 1-.833.135A9.626 9.626 0 0 0 12 5.315c-.89 0-1.772.119-2.592.35a1 1 0 0 1-.83-.134c-.752-.507-1.374-.807-1.868-.947-.144.653-.073 1.194.092 1.607a1 1 0 0 1-.189 1.045C6.016 7.89 5.7 8.694 5.7 9.64c0 3.172 1.371 4.328 4.322 4.66.865.097 1.201 1.177.544 1.748-.192.168-.429.732-.429 1.364v3.15c0 .986-.835 1.725-1.96 1.528a1 1 0 0 1-.04-1.962v-.99c-.91.061-1.662-.088-2.254-.485z"></path>
+                                                </svg>
+                                            </a>
+                                            <a href="https://instagram.com/jonbellah" class="group -m-1 p-1 block cursor-pointer" rel="me">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 transition group-hover:text-blue-500">
+                                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                                    <path fill="currentColor" d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z"></path>
+                                                </svg>
+                                            </a>
+                                            <a href="https://jonbellah.com/rss.xml" class="group -m-1 p-1 block cursor-pointer" rel="me">
+                                                <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="h-4 w-auto transition group-hover:text-blue-500">
+                                                    <path fill="currentColor" d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194 11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0 13.806c0-1.21.983-2.195 2.194-2.195zM10.606 16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"></path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-16 sm:mt-20">
+                        <div class="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+                            <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
+                                <img alt="" loading="lazy" width="1920" height="2801" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" sizes="(min-width: 640px) 18rem, 11rem" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=16&amp;q=75 16w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=32&amp;q=75 32w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=48&amp;q=75 48w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=64&amp;q=75 64w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=96&amp;q=75 96w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=128&amp;q=75 128w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=256&amp;q=75 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=384&amp;q=75 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=640&amp;q=75 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=750&amp;q=75 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=828&amp;q=75 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=3840&amp;q=75 3840w" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-1.1237ea19.jpg&amp;w=3840&amp;q=75"/>
+                            </div>
+                            <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl -rotate-2">
+                                <img alt="" loading="lazy" width="1920" height="2262" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" sizes="(min-width: 640px) 18rem, 11rem" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=16&amp;q=75 16w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=32&amp;q=75 32w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=48&amp;q=75 48w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=64&amp;q=75 64w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=96&amp;q=75 96w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=128&amp;q=75 128w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=256&amp;q=75 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=384&amp;q=75 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=640&amp;q=75 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=750&amp;q=75 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=828&amp;q=75 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=3840&amp;q=75 3840w" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-2.417f0f92.jpg&amp;w=3840&amp;q=75"/>
+                            </div>
+                            <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
+                                <img alt="" loading="lazy" width="1920" height="1280" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" sizes="(min-width: 640px) 18rem, 11rem" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=16&amp;q=75 16w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=32&amp;q=75 32w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=48&amp;q=75 48w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=64&amp;q=75 64w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=96&amp;q=75 96w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=128&amp;q=75 128w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=256&amp;q=75 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=384&amp;q=75 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=640&amp;q=75 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=750&amp;q=75 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=828&amp;q=75 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=3840&amp;q=75 3840w" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbledsoe-creek.1cc520a4.jpg&amp;w=3840&amp;q=75"/>
+                            </div>
+                            <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl rotate-2">
+                                <img alt="" loading="lazy" width="1600" height="2048" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" sizes="(min-width: 640px) 18rem, 11rem" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=16&amp;q=75 16w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=32&amp;q=75 32w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=48&amp;q=75 48w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=64&amp;q=75 64w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=96&amp;q=75 96w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=128&amp;q=75 128w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=256&amp;q=75 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=384&amp;q=75 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=640&amp;q=75 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=750&amp;q=75 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=828&amp;q=75 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=3840&amp;q=75 3840w" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-4.86b10a7d.jpg&amp;w=3840&amp;q=75"/>
+                            </div>
+                            <div class="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl -rotate-2">
+                                <img alt="" loading="lazy" width="1600" height="2203" decoding="async" data-nimg="1" class="absolute inset-0 h-full w-full object-cover" style="color:transparent" sizes="(min-width: 640px) 18rem, 11rem" srcSet="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=16&amp;q=75 16w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=32&amp;q=75 32w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=48&amp;q=75 48w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=64&amp;q=75 64w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=96&amp;q=75 96w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=128&amp;q=75 128w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=256&amp;q=75 256w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=384&amp;q=75 384w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=640&amp;q=75 640w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=750&amp;q=75 750w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=828&amp;q=75 828w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=1080&amp;q=75 1080w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=1200&amp;q=75 1200w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=1920&amp;q=75 1920w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=2048&amp;q=75 2048w, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=3840&amp;q=75 3840w" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimg-5.14564cb9.jpg&amp;w=3840&amp;q=75"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sm:px-8 mt-24 md:mt-28">
+                        <div class="mx-auto max-w-7xl lg:px-8">
+                            <div class="relative px-4 sm:px-8 lg:px-12">
+                                <div class="mx-auto max-w-2xl lg:max-w-5xl">
+                                    <div class="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+                                        <div class="flex flex-col gap-16">
+                                            <article class="group relative flex flex-col items-start">
+                                                <h2 class="text-base font-semibold tracking-tight text-slate-800 dark:text-slate-100">
+                                                    <div class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-slate-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-slate-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                                                    <a href="/articles/websockets-with-react-query">
+                                                        <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                                                        <span class="relative z-10">Using Websockets with React Query</span>
+                                                    </a>
+                                                </h2>
+                                                <time class="relative z-10 order-first mb-3 flex items-center text-sm text-slate-400 dark:text-slate-500 pl-3.5" dateTime="2022-11-22T12:36:40.658Z">
+                                                    <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+                                                        <span class="h-4 w-0.5 rounded-full bg-slate-200 dark:bg-slate-500"></span>
+                                                    </span>
+                                                    Nov 22, 2022
+                                                </time>
+                                                <p class="relative z-10 mt-2 text-sm text-slate-600 dark:text-slate-400">If you just need to fetch some data you can use useQuery and be on your way, but as your application grows in complexity you may find yourself wanting to connect to a websocket to receive real-time updates from your server. Fortunately, React Query makes this quite painless.</p>
+                                                <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium dark:text-blue-400 text-blue-500">
+                                                    Read article
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
+                                                        <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </div>
+                                            </article>
+                                            <article class="group relative flex flex-col items-start">
+                                                <h2 class="text-base font-semibold tracking-tight text-slate-800 dark:text-slate-100">
+                                                    <div class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-slate-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-slate-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                                                    <a href="/articles/bye-bye-birdie">
+                                                        <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                                                        <span class="relative z-10">Bye bye, Birdie</span>
+                                                    </a>
+                                                </h2>
+                                                <time class="relative z-10 order-first mb-3 flex items-center text-sm text-slate-400 dark:text-slate-500 pl-3.5" dateTime="2022-11-11T14:17:39.475Z">
+                                                    <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+                                                        <span class="h-4 w-0.5 rounded-full bg-slate-200 dark:bg-slate-500"></span>
+                                                    </span>
+                                                    Nov 11, 2022
+                                                </time>
+                                                <p class="relative z-10 mt-2 text-sm text-slate-600 dark:text-slate-400">I honestly can &#x27;t tell if the Twitter acquisition is going off the rails or according to plan.</p>
+                                                <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium dark:text-blue-400 text-blue-500">
+                                                    Read article
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
+                                                        <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </div>
+                                            </article>
+                                            <article class="group relative flex flex-col items-start">
+                                                <h2 class="text-base font-semibold tracking-tight text-slate-800 dark:text-slate-100">
+                                                    <div class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-slate-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-slate-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                                                    <a href="/articles/transition-to-engineering-management">
+                                                        <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                                                        <span class="relative z-10">Making the Jump to Engineering Management</span>
+                                                    </a>
+                                                </h2>
+                                                <time class="relative z-10 order-first mb-3 flex items-center text-sm text-slate-400 dark:text-slate-500 pl-3.5" dateTime="2022-01-17T10:00:00.967Z">
+                                                    <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+                                                        <span class="h-4 w-0.5 rounded-full bg-slate-200 dark:bg-slate-500"></span>
+                                                    </span>
+                                                    Jan 17, 2022
+                                                </time>
+                                                <p class="relative z-10 mt-2 text-sm text-slate-600 dark:text-slate-400">After almost a decade working as an individual contributor — with a few short stints in engineering leadership-adjacent roles — I &#x27;ve decided to finally make the jump to engineering management.</p>
+                                                <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium dark:text-blue-400 text-blue-500">
+                                                    Read article
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
+                                                        <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </div>
+                                            </article>
+                                            <article class="group relative flex flex-col items-start">
+                                                <h2 class="text-base font-semibold tracking-tight text-slate-800 dark:text-slate-100">
+                                                    <div class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-slate-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-slate-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                                                    <a href="/articles/rss-feed-nextjs">
+                                                        <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                                                        <span class="relative z-10">Adding an RSS Feed to a Next.js Blog</span>
+                                                    </a>
+                                                </h2>
+                                                <time class="relative z-10 order-first mb-3 flex items-center text-sm text-slate-400 dark:text-slate-500 pl-3.5" dateTime="2022-01-10T16:01:57.009Z">
+                                                    <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+                                                        <span class="h-4 w-0.5 rounded-full bg-slate-200 dark:bg-slate-500"></span>
+                                                    </span>
+                                                    Jan 10, 2022
+                                                </time>
+                                                <p class="relative z-10 mt-2 text-sm text-slate-600 dark:text-slate-400">One thing I had to sort out when migrating this site to Next.js was moving from the relatively-straightforward implementation of gatsby-plugin-feed to building a custom-rolled RSS feed. It actually turned out to be a relatively painless process, so I thought I &#x27;d share how it works.</p>
+                                                <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium dark:text-blue-400 text-blue-500">
+                                                    Read article
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
+                                                        <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </div>
+                                            </article>
+                                            <article class="group relative flex flex-col items-start">
+                                                <h2 class="text-base font-semibold tracking-tight text-slate-800 dark:text-slate-100">
+                                                    <div class="absolute -inset-y-6 -inset-x-4 z-0 scale-95 bg-slate-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-slate-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                                                    <a href="/articles/renewed-focus">
+                                                        <span class="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
+                                                        <span class="relative z-10">A Renewed Sense of Focus</span>
+                                                    </a>
+                                                </h2>
+                                                <time class="relative z-10 order-first mb-3 flex items-center text-sm text-slate-400 dark:text-slate-500 pl-3.5" dateTime="2021-12-23T14:00:56.768Z">
+                                                    <span class="absolute inset-y-0 left-0 flex items-center" aria-hidden="true">
+                                                        <span class="h-4 w-0.5 rounded-full bg-slate-200 dark:bg-slate-500"></span>
+                                                    </span>
+                                                    Dec 23, 2021
+                                                </time>
+                                                <p class="relative z-10 mt-2 text-sm text-slate-600 dark:text-slate-400">Last year, I announced the launch of a project called JSFoundry. Today, I &#x27;m announcing that I &#x27;m shutting it down.</p>
+                                                <div aria-hidden="true" class="relative z-10 mt-4 flex items-center text-sm font-medium dark:text-blue-400 text-blue-500">
+                                                    Read article
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="ml-1 h-4 w-4 stroke-current">
+                                                        <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="space-y-10 lg:pl-16 xl:pl-24">
+                                            <form class="rounded-2xl border border-slate-100 p-6 dark:border-slate-700/40">
+                                                <h2 class="flex text-sm font-semibold text-slate-900 dark:text-slate-100 items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" class="h-6 w-6 flex-none text-slate-400">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"></path>
+                                                    </svg>
+                                                    <span class="ml-3">Stay up to date</span>
+                                                </h2>
+                                                <p class="mt-2 text-sm text-slate-600 dark:text-slate-400">Consider joining literally tens of other developers who receive tips and tutorials right in their inbox. No spam. Ever.</p>
+                                                <div class="mt-6 flex">
+                                                    <input type="email" placeholder="Email address…" aria-label="Email address" required="" class="min-w-0 flex-auto appearance-none rounded-md border border-slate-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-slate-800/5 placeholder:text-slate-400 focus:border-blue-500 focus:outline-none focus:ring-4 focus:ring-blue-500/10 dark:border-slate-700 dark:bg-slate-700/[0.15] dark:text-slate-200 dark:placeholder:text-slate-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/10 sm:text-sm" value=""/>
+                                                    <button class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-slate-800 font-semibold text-slate-100 hover:bg-slate-700 active:bg-slate-800 active:text-slate-100/70 dark:bg-slate-700 dark:hover:bg-slate-600 dark:active:bg-slate-700 dark:active:text-slate-100/70 ml-4 flex-none disabled:opacity-30" type="submit">Subscribe</button>
+                                                </div>
+                                            </form>
+                                            <div class="rounded-2xl border border-slate-100 p-6 dark:border-slate-700/40">
+                                                <h2 class="flex items-center text-sm font-semibold text-slate-900 dark:text-slate-100">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6 flex-none text-slate-400">
+                                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                                        <path fill="currentColor" d="M19.606 6.995c-.076-.298-.292-.523-.539-.592C18.63 6.28 16.5 6 12 6s-6.628.28-7.069.403c-.244.068-.46.293-.537.592C4.285 7.419 4 9.196 4 12s.285 4.58.394 5.006c.076.297.292.522.538.59C5.372 17.72 7.5 18 12 18s6.629-.28 7.069-.403c.244-.068.46-.293.537-.592C19.715 16.581 20 14.8 20 12s-.285-4.58-.394-5.005zm1.937-.497C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5v-7l6 3.5-6 3.5z"></path>
+                                                    </svg>
+                                                    <span class="ml-3">From YouTube</span>
+                                                </h2>
+                                                <ol class="mt-6 space-y-4"></ol>
+                                                <a class="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-slate-50 font-medium text-slate-900 hover:bg-slate-100 active:bg-slate-100 active:text-slate-900/60 dark:bg-slate-800/50 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-slate-50 dark:active:bg-slate-800/50 dark:active:text-slate-50/70 group mt-6 w-full py-2.5" href="https://youtube.com/jonbellah">
+                                                    Go to channel
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-3 w-auto stroke-slate-400 transition group-active:stroke-slate-600 dark:group-hover:stroke-slate-50 dark:group-active:stroke-slate-50">
+                                                        <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z" clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="mt-32">
+                    <div class="sm:px-8">
+                        <div class="mx-auto max-w-7xl lg:px-8">
+                            <div class="border-t border-slate-100 pt-10 pb-16 dark:border-slate-700/40">
+                                <div class="relative px-4 sm:px-8 lg:px-12">
+                                    <div class="mx-auto max-w-2xl lg:max-w-5xl">
+                                        <div class="flex flex-col items-start justify-between gap-6 sm:flex-row">
+                                            <div class="space-y-6">
+                                                <div class="flex gap-6 text-sm font-medium text-slate-800 dark:text-slate-200">
+                                                    <a class="transition hover:text-blue-500 dark:hover:text-blue-400" href="/about">About</a>
+                                                    <a class="transition hover:text-blue-500 dark:hover:text-blue-400" href="/articles">Articles</a>
+                                                    <a class="transition hover:text-blue-500 dark:hover:text-blue-400" href="/projects">Projects</a>
+                                                    <a class="transition hover:text-blue-500 dark:hover:text-blue-400" href="/photography">Photography</a>
+                                                    <a class="transition hover:text-blue-500 dark:hover:text-blue-400" href="/uses">Uses</a>
+                                                </div>
+                                                <div class="flex items-center gap-6 text-sm font-medium">
+                                                    <a href="https://mastodon.social/@jonbellah" class="group -m-1 p-1 text-slate-400 dark:text-slate-500 hover:text-blue-500 cursor-pointer block">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" class="h-5 w-5  transition ">
+                                                            <path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="https://youtube.com/jonbellah" class="group -m-1 p-1 text-slate-400 dark:text-slate-500 hover:text-blue-500 cursor-pointer block">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5  transition ">
+                                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                                            <path fill="currentColor" d="M19.606 6.995c-.076-.298-.292-.523-.539-.592C18.63 6.28 16.5 6 12 6s-6.628.28-7.069.403c-.244.068-.46.293-.537.592C4.285 7.419 4 9.196 4 12s.285 4.58.394 5.006c.076.297.292.522.538.59C5.372 17.72 7.5 18 12 18s6.629-.28 7.069-.403c.244-.068.46-.293.537-.592C19.715 16.581 20 14.8 20 12s-.285-4.58-.394-5.005zm1.937-.497C22 8.28 22 12 22 12s0 3.72-.457 5.502c-.254.985-.997 1.76-1.938 2.022C17.896 20 12 20 12 20s-5.893 0-7.605-.476c-.945-.266-1.687-1.04-1.938-2.022C2 15.72 2 12 2 12s0-3.72.457-5.502c.254-.985.997-1.76 1.938-2.022C6.107 4 12 4 12 4s5.896 0 7.605.476c.945.266 1.687 1.04 1.938 2.022zM10 15.5v-7l6 3.5-6 3.5z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="https://github.com/jonbellah" class="group -m-1 p-1 text-slate-400 dark:text-slate-500 hover:text-blue-500 cursor-pointer block">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5  transition ">
+                                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                                            <path fill="currentColor" d="M5.883 18.653c-.3-.2-.558-.455-.86-.816a50.32 50.32 0 0 1-.466-.579c-.463-.575-.755-.84-1.057-.949a1 1 0 0 1 .676-1.883c.752.27 1.261.735 1.947 1.588-.094-.117.34.427.433.539.19.227.33.365.44.438.204.137.587.196 1.15.14.023-.382.094-.753.202-1.095C5.38 15.31 3.7 13.396 3.7 9.64c0-1.24.37-2.356 1.058-3.292-.218-.894-.185-1.975.302-3.192a1 1 0 0 1 .63-.582c.081-.024.127-.035.208-.047.803-.123 1.937.17 3.415 1.096A11.731 11.731 0 0 1 12 3.315c.912 0 1.818.104 2.684.308 1.477-.933 2.613-1.226 3.422-1.096.085.013.157.03.218.05a1 1 0 0 1 .616.58c.487 1.216.52 2.297.302 3.19.691.936 1.058 2.045 1.058 3.293 0 3.757-1.674 5.665-4.642 6.392.125.415.19.879.19 1.38a300.492 300.492 0 0 1-.012 2.716 1 1 0 0 1-.019 1.958c-1.139.228-1.983-.532-1.983-1.525l.002-.446.005-.705c.005-.708.007-1.338.007-1.998 0-.697-.183-1.152-.425-1.36-.661-.57-.326-1.655.54-1.752 2.967-.333 4.337-1.482 4.337-4.66 0-.955-.312-1.744-.913-2.404a1 1 0 0 1-.19-1.045c.166-.414.237-.957.096-1.614l-.01.003c-.491.139-1.11.44-1.858.949a1 1 0 0 1-.833.135A9.626 9.626 0 0 0 12 5.315c-.89 0-1.772.119-2.592.35a1 1 0 0 1-.83-.134c-.752-.507-1.374-.807-1.868-.947-.144.653-.073 1.194.092 1.607a1 1 0 0 1-.189 1.045C6.016 7.89 5.7 8.694 5.7 9.64c0 3.172 1.371 4.328 4.322 4.66.865.097 1.201 1.177.544 1.748-.192.168-.429.732-.429 1.364v3.15c0 .986-.835 1.725-1.96 1.528a1 1 0 0 1-.04-1.962v-.99c-.91.061-1.662-.088-2.254-.485z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="https://instagram.com/jonbellah" class="group -m-1 p-1 text-slate-400 dark:text-slate-500 hover:text-blue-500 cursor-pointer block">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5  transition ">
+                                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                                            <path fill="currentColor" d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z"></path>
+                                                        </svg>
+                                                    </a>
+                                                    <a href="https://jonbellah.com/rss.xml" class="group -m-1 p-1 text-slate-400 dark:text-slate-500 hover:text-blue-500 cursor-pointer block">
+                                                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-auto  transition ">
+                                                            <path fill="currentColor" d="M12.8 16C12.8 8.978 7.022 3.2 0 3.2V0c8.777 0 16 7.223 16 16h-3.2zM2.194 11.61c1.21 0 2.195.985 2.195 2.196 0 1.21-.99 2.194-2.2 2.194C.98 16 0 15.017 0 13.806c0-1.21.983-2.195 2.194-2.195zM10.606 16h-3.11c0-4.113-3.383-7.497-7.496-7.497v-3.11c5.818 0 10.606 4.79 10.606 10.607z"></path>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <p class="text-sm text-slate-400 dark:text-slate-500">© 
+                                            <!-- -->
+                                            2023
+                                            <!-- -->
+                                            Jon Bellah. All rights reserved.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script id="__NEXT_DATA__" type="application/json">
+            {
+                "props": {
+                    "pageProps": {
+                        "posts": [
+                            {
+                                "content": "\nI am a massive fan of [React Query](https://tanstack.com/query/v4). It has grown on me to the point that it's now one of the first tools I set up when I start on a new project. If you're not familiar with React Query, at a high level it's a library that helps you manage your data fetching and client-side caching in React applications.\n\nReact Query makes it easy to write declarative data fetching code that gets access to all sorts of nice features like request states (`isLoading`, `isFetched`, etc), query deduping, query cancellation, cache control and persistence, and a [whole lot more](https://tanstack.com/query/v4/docs/comparison) \u0026mdash; and it gives you the power to manipulate your client-side cache in pretty much any way you might need.\n\nIf you just need to fetch some data you can use [`useQuery`](https://tanstack.com/query/v4/docs/reference/useQuery) with one or two lines of code and be on your way, but as your application grows in complexity you may find yourself wanting to connect to a websocket to receive real-time updates from your server. Fortunately, React Query makes this quite painless.\n\n## Querying data\n\nWhen you're ready to start updating your client via websockets, if you're already using React Query, the good news is that nothing really changes with the way you fetch your data.\n\n```js\nconst { data } = useQuery({\n  queryKey: ['replies', postId],\n  queryFn: () =\u003e fetchReplies(postId),\n});\n```\n\nHere we've got a `fetchReplies` function that returns a promise that resolves to an array of replies for a given post. We're using the `queryKey` to identify this query, and we're using the `queryFn` to call our `fetchReplies` function.\n\n## Subscribing to a websocket\n\nIn this example, we're going to use [Pusher](https://pusher.com). I like Pusher because they have an [open specification](https://pusher.com/docs/channels/library_auth_reference/server-library-reference-specification/) and there are other, self-hostable [alternatives](https://soketi.app/) that implement the Pusher spec. Meaning you can build on Pusher and if your application scales to the _incredibly expensive_ tiers of Pusher.com, you don't have to rewrite your entire socket architecture to cut some costs. You can just host your own server.\n\n```js\nReact.useEffect(() =\u003e {\n  const channel = pusher.subscribe('postEvents');\n\n  channel.bind('newReply', (event) =\u003e {\n    /* ... */\n  });\n\n  return () =\u003e {\n    channel.unbind('newReply');\n    pusher.unsubscribe('postEvents');\n  };\n}, []);\n```\n\n## Interacting with the cache\n\nThere are two ways that I typically approach passing a socket message along to React Query. Each are useful in different contexts, so we'll cover both and when you might want to use one over the other.\n\nThe first is to invalidate the query by `queryKey`, so that the next time that query is needed it'll fetch fresh data from the server. This approach minimizes the amount of data over the wire via the websocket and allows users to only fetch the data that they need, when they need it.\n\nThe second approach is to send the updated data through the websocket and then manually update the `queryClient` cache with that new data. This approach is better if you expect to have a frequent, small updates or if you expect a large number of concurrent consumers \u0026mdash; and want to avoid triggering a thundering herd every time new data is available.\n\n### Invalidate Query\n\nWhen a socket event occurs, we'll use [`queryClient.invalidateQueries`](https://tanstack.com/query/v4/docs/reference/QueryClient#queryclientinvalidatequeries). The nice thing about React Query here is that if the query is actively being used, it'll refetch that data in the background and show the stale data in the UI until the new data is available. If that query is _not_ actively being used, React Query marks it as invalidated and fetches it the next time the user needs it. \n\nUsing the same example from above, we'll fill out the `newReply` event handler.\n\n```js\nReact.useEffect(() =\u003e {\n  const channel = pusher.subscribe('postEvents');\n\n  channel.bind('newReply', (postId) =\u003e {\n    queryClient.invalidateQueries({\n      queryKey: ['replies', postId]\n    })\n  });\n\n  return () =\u003e {\n    channel.unbind('newReply');\n    pusher.unsubscribe('postEvents');\n  };\n}, []);\n```\n\nNow on the server, you can send a message to the `post-replies` channel with the `postId` as the event data:\n\n```js\npusher.trigger('postEvents', 'newReply', postId);\n```\n\n### Manually update the cache\n\nIf you expect to have frequent, small updates \u0026mdash; like a chat feature \u0026mdash; or a large number of concurrent users it is probably better to ship the updated data over the websocket and update the cache by `queryKey` directly using [`queryClient.setQueryData`](https://tanstack.com/query/v4/docs/reference/QueryClient#queryclientsetquerydata).\n\n```js\nReact.useEffect(() =\u003e {\n  const channel = pusher.subscribe('postEvents');\n\n  channel.bind('newReply', (reply) =\u003e {\n    queryClient.setQueryData(\n      ['replies', reply.postId],\n      (cacheData) =\u003e [...cacheData, reply]\n    );\n  });\n\n  return () =\u003e {\n    channel.unbind('newReply');\n    pusher.unsubscribe('postEvents');\n  };\n}, []);\n```\n\nIn this case, we're still updating the same record by `queryKey` but instead of telling React Query to fetch the data next time it needs it, we just take the cached value as a parameter in our update function and append our new comment entry to the array.\n\nAnd on the server side, rather than just sending the `postId` we'll send the entire `reply` object.\n\n```js\npusher.trigger('postEvents', 'newReply', reply);\n```\n\n",
+                                "data": {
+                                    "title": "Using Websockets with React Query",
+                                    "date": "2022-11-22T12:36:40.658Z",
+                                    "excerpt": "If you just need to fetch some data you can use useQuery and be on your way, but as your application grows in complexity you may find yourself wanting to connect to a websocket to receive real-time updates from your server. Fortunately, React Query makes this quite painless.",
+                                    "category": {
+                                        "label": "JavaScript",
+                                        "slug": "javascript"
+                                    }
+                                },
+                                "filePath": "websockets-with-react-query.mdx"
+                            },
+                            {
+                                "content": "\nI honestly can't tell if the Twitter acquisition is going off the rails or according to plan.\n\nI'm not sure what will happen to Twitter over the coming weeks and months, but it seems inevitable that the outcome will at minimum be fragmentation of the various communities that I've followed and engaged with over the years.\n\nIf you're part of the contingent that's bailing on Twitter, I'm [@jonbellah@mastodon.social](https://mastodon.social/@jonbellah).",
+                                "data": {
+                                    "title": "Bye bye, Birdie",
+                                    "date": "2022-11-11T14:17:39.475Z",
+                                    "excerpt": "I honestly can't tell if the Twitter acquisition is going off the rails or according to plan.",
+                                    "category": {
+                                        "label": "Journal",
+                                        "slug": "journal"
+                                    }
+                                },
+                                "filePath": "bye-bye-birdie.mdx"
+                            },
+                            {
+                                "content": "\nAfter almost a decade working as an individual contributor — with a few short stints in engineering leadership-adjacent roles — I've decided to finally make the\njump to engineering management.\n\nToday is my first day as an Engineering Manager at [Endeavor](https://www.endeavorco.com/story/).\n\nBeyond learning an entirely new skillset, I'm particularly excited about this new role for a few key reasons.\n\nFirst, Endeavor is just an incredibly interesting and exciting company to go to work for. They've got their hands in a broad swath of the sports and entertainment\nindustries, from being one of the largest [talent agencies](https://www.wmeagency.com/expertise/) and [sports and event management](https://img.com/expertise/)\ncompanies in the world to being the parent company of the [UFC](https://ufc.com) and [PBR](https://pbr.com/) \u0026mdash; and so, so much more.\n\nSecondly, I'll be working with _several_ friends from my time at TED. The TED Tech team was one of the smartest and most close-knit groups that I've ever worked\nwith and getting a chance to go work with a bunch of them again is super exciting.\n\nAnd lastly, I'll be leading a team at an internal incubator charged with innovating and building the next generation of Endeavor's business. The William\nMorris Agency \u0026mdash; the precursor to today's Endeavor \u0026mdash; was formed almost 124 years ago\u0026hellip; and a company doesn't survive for 124 years by remaining\nstagnant. Endeavor has innovated and grown their business decade-after-decade and I'm looking forward to playing a (small) part in writing the next chapter of\nthat story.\n\nI'll likely be hiring for my team very soon, so if you're interested in working with me, don't hesitate to [reach out](https://jonbellah.com/contact)!",
+                                "data": {
+                                    "title": "Making the Jump to Engineering Management",
+                                    "date": "2022-01-17T10:00:00.967Z",
+                                    "excerpt": "After almost a decade working as an individual contributor — with a few short stints in engineering leadership-adjacent roles — I've decided to finally make the jump to engineering management.",
+                                    "category": {
+                                        "label": "Journal",
+                                        "slug": "journal"
+                                    }
+                                },
+                                "filePath": "transition-to-engineering-management.mdx"
+                            },
+                            {
+                                "content": "\nIn my [last post](https://jonbellah.com/articles/renewed-focus), I talked a bit about migrating this blog over from Gatsby to Next.js. One thing I had to\nsort out in that migration was moving from the relatively-straightforward implementation of `gatsby-plugin-feed` to building a custom-rolled RSS feed.\n\nIt actually turned out to be a relatively painless process, so I thought I'd share how it works.\n\n## A Bit of Background\n\nFirst, it's probably helpful to cover how I've got things set up. I write everything in markdown (mdx) and have it sitting in a `content` directory,\nalongside the `src` and `public` directories in my codebase.\n\nHere's roughly the file structure we'll be working with in this tutorial:\n\n```\nblog/\n├─ src/\n│  ├─ pages/\n│  │  ├─ api/\n│  │  │  ├─ rss/\n│  │  │  │  ├─ index.ts\n│  │  │  │  └─ feed.json\n├─ scripts/\n│  └─ rss.mjs\n├─ content/\n│  └─ blog-post.mdx\n└─ package.json\n\n```\n\nThe way that this will end up working is that we will use a `prebuild` hook in our `package.json` to run a node script that will grab all of our posts\nand format them into a `feed.json` file. From there we'll create an API route that will use that json file to serve up our RSS feed. Lastly, we'll use our\n`next.config.js` file to add a rewrite, so that we can serve the RSS feed from `/rss.xml`.\n\n## The Node Script\n\nThis node script will be run on a `prebuild` hook. When we build our site to deploy, the script will run through the `content/` directory, grab all of our posts\nloop through them and format them into a `feed.json` file that we can deploy alongside our API endpoint.\n\nThe primary reason for generating this JSON file is so that we don't have to do a bunch of file system reads when someone requests the RSS feed.\n\nHere's the script in full:\n\n```js\n// scripts/rss.mjs\nimport fs from 'fs';\nimport matter from 'gray-matter';\nimport path from 'path';\n\nconst generateRss = async () =\u003e {\n  const POSTS_DIR = path.join(process.cwd(), 'content');\n  const posts = fs\n    .readdirSync(POSTS_DIR)\n    .filter((filePath) =\u003e filePath !== '.DS_Store') // only needed for macOS\n    .map((filePath) =\u003e {\n      const source = fs.readFileSync(path.join(POSTS_DIR, filePath));\n      const { content, data } = matter(source);\n\n      return {\n        content,\n        data,\n        filePath,\n      };\n    })\n    .sort(\n      (a, b) =\u003e\n        new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),\n    );\n\n  // Create sitemap file\n  fs.writeFileSync('src/pages/api/rss/feed.json', JSON.stringify(posts));\n};\n\ngenerateRss();\n```\n\nThe way this works is that we're calling `readdirSync` on the directory that contains all of our mdx files to get an array of file names,\nthen filtering out the `.DS_Store` file (only necessary for macOS), and then mapping over that list of files.\n\nWhen we map over the array of file names, we then call `readFileSync` to read the individual file and use the `gray-matter` package to extract the\nfrontmatter into an object, and return all of that data to make our `posts` variable an array of objects that contain all of our posts and their frontmatter.\n\nFinally, we sort the posts by publish date and then call `fs.writeFileSync` to write a `feed.json` file into the `pages/api/rss` directory; where it'll sit next\nto the API endpoint handler.\n\n## The Prebuild Hook\n\nNot much to this one. When you run `npm run build`, the `prebuild` hook will run before the build process begins. We'll use this hook to run the node script we just built.\n\n```json\n{\n  \"scripts\": {\n    \"generate:rss\": \"node scripts/rss.mjs\",\n    \"prebuild\": \"npm run generate:rss\"\n  }\n}\n```\n\n## The API Route\n\nThis is the meat and potatoes of serving up the RSS feed. We're using a custom [API route](https://nextjs.org/docs/api-routes/) to run a lambda function that\nloads up the JSON file that we generated in the previous step, formats it into an XML document, and returns it back to the requester.\n\n```js\n// src/pages/api/rss/index.ts\nimport { NextApiRequest, NextApiResponse } from 'next';\nimport nc from 'next-connect';\n\nimport { BlogPost } from 'lib/types';\n\nimport feed from './feed.json';\n\nconst metadata = {\n  title: 'JonBellah.com',\n  description: 'About my site!',\n  link: 'https://jonbellah.com'\n}\n\nconst handler = nc();\n\n/**\n * Respond with an rss.xml\n *\n * @param {object} req NextApiRequest\n * @param {object} res NextApiResponse\n */\nhandler.get(async (req: NextApiRequest, res: NextApiResponse) =\u003e {\n  try {\n    const postItems = feed\n      .map((page: BlogPost) =\u003e {\n        const url = `${\n          process.env.NEXT_PUBLIC_ROOT_URL\n        }/articles/${page.filePath.replace('.mdx', '')}`;\n\n        return `\u003citem\u003e\n          \u003ctitle\u003e${page.data.title}\u003c/title\u003e\n          \u003clink\u003e${url}\u003c/link\u003e\n          \u003cguid\u003e${url}\u003c/guid\u003e\n          \u003cpubDate\u003e${page.data.date}\u003c/pubDate\u003e\n          ${\n            page.data.excerpt \u0026\u0026\n            `\u003cdescription\u003e${page.data.excerpt}\u003c/description\u003e`\n          }\n          ${/**\n           * NOTE: page.content on the next line should be wrapped with\n           * the CDATA tag, but it breaks my _actual_ RSS feed if I\n           * include it. Check the link to the source at the bottom\n           * of this post for the actual code.\n           */}\n          \u003ccontent:encoded\u003e${page.content}\u003c/content:encoded\u003e\n        \u003c/item\u003e`;\n      })\n      .join('');\n\n    // Add urlSet to entire sitemap string\n    const sitemap = `\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\n    \u003crss xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" xmlns:atom=\"http://www.w3.org/2005/Atom\" version=\"2.0\"\u003e\n      \u003cchannel\u003e\n      \u003ctitle\u003e${metadata.title}\u003c/title\u003e\n      \u003cdescription\u003e${metadata.description}\u003c/description\u003e\n      \u003clink\u003e${metadata.link}\u003c/link\u003e\n      \u003clastBuildDate\u003e${feed[0].data.date}\u003c/lastBuildDate\u003e\n      ${postItems}\n      \u003c/channel\u003e\n      \u003c/rss\u003e`;\n\n    // set response content header to xml\n    res.setHeader('Content-Type', 'text/xml');\n\n    return res.status(200).send(sitemap);\n  } catch (e: unknown) {\n    if (!(e instanceof Error)) {\n      throw e;\n    }\n\n    return res.status(500).json({ error: e.message || '' });\n  }\n});\n\nexport default handler;\n```\n\nIt's worth noting, too, that if you're using a CMS that has a REST API \u0026mdash; like [WordPress](https://wordpress.org/) \u0026mdash; you can fetch the list of posts in this\nlambda function and build your RSS feed on-the-fly. If your content _is_ stored in an external CMS, you can skip the `prebuild` script and just use the API route.\n\nAnother thing worth noting is that the `url` variable within the `postItems` map assumes that the path for posts will be `articles/{post-slug}`. Be sure to change that to\nwhatever path you prefer for your own site.\n\n## Configure the Next Rewrite\n\nThe final step to get this up and running is to use our `next.config.js` file to add a rewrite, so that we can serve the RSS feed from `/rss.xml` instead of `/api/rss`.\n\nFeel free to make the `source` route whatever you prefer, especially if you're trying to preserve the route to an existing RSS feed.\n\n```js\n// next.config.js\nmodule.exports = {\n  rewrites: async () =\u003e [\n    {\n      source: '/rss.xml',\n      destination: '/api/rss',\n    },\n  ],\n};\n```\n\nNow once you deploy your site to Vercel, you can visit `yoursite.com/rss.xml` and see your RSS feed!\n\n## Source\n\nYou can find the source code for this tutorial [here](https://github.com/jonbellah/tutorials/tree/main/apps/nextjs-rss-feed).\n",
+                                "data": {
+                                    "title": "Adding an RSS Feed to a Next.js Blog",
+                                    "date": "2022-01-10T16:01:57.009Z",
+                                    "excerpt": "One thing I had to sort out when migrating this site to Next.js was moving from the relatively-straightforward implementation of gatsby-plugin-feed to building a custom-rolled RSS feed. It actually turned out to be a relatively painless process, so I thought I'd share how it works.",
+                                    "category": {
+                                        "label": "JavaScript",
+                                        "slug": "javascript"
+                                    }
+                                },
+                                "filePath": "rss-feed-nextjs.mdx"
+                            },
+                            {
+                                "content": "\nLast year, I announced the launch of a project called JSFoundry. At the time, my objective was to build a place to put all of my tutorials,\ncourses, and other teaching-related materials with a goal of separating those materials out into their own \"brand\", so that (eventually)\nI could tap into other educators and begin building up a community.\n\nToday, I'm announcing that I'm shutting it down.\n\n## What happened?\n\nWell... _:gestures_wildly:_ a lot of things. The pandemic might be one (small) factor, but it was certainly not the only one.\n\nOn top of a couple of job changes, being a dad, and working on a long-running freelance retainer; the simple truth is that pretty much as soon as I\nlaunched the site I lost sight of the core objective. I was exhausted by trying to figure out \"if I write this blog post, where should it go?\" or \"do I\nwant to spin up a separate YouTube channel for new tutorials?\" and all of the other strategic questions that, honestly, I should've thought through before\nbuilding out the site.\n\nI had analysis paralysis. For no real reason.\n\nIt was a good learning experience, but not exactly time well-spent.\n\nAs I continued to stew on the strategic questions, I realized that ultimately my goal is and always has been to build a SaaS business, not necessarily an\ninfo product business. I have always wanted to build my own company \u0026mdash; and eventually work for myself \u0026mdash; and, at the end of the day, I feel that\nbuilding software is a better fit for what I envision that work to be. I love teaching, but I've always enjoyed the work of actually writing code more than\nwriting blog posts or recording and editing tutorials.\n\nAt the same time, though, I have always felt \u0026mdash; and continue to feel \u0026mdash; strongly about the value of teaching and developer education work. I honestly\nbelieve it has the power to change peoples lives. Helping people along their journey, particularly towards their first developer jobs, is one of the most rewarding\nfeelings ever. So, it's something that I absolutely plan to continue doing... just without the pressure of trying to build up some brand or business.\n\n## Well, what now?\n\nFirst off, while this site may look the same as it has for a while, I've migrated it over from Gatsby to Next. I've moved all of my blog and course-related code\ninto a [Turborepo](https://turborepo.org/), where I can more easily manage everything.\n\nI took a bit of time to tear apart my course platform and trim it down to only the absolute essentials, improved those features deemed essential, and relaunched\nthe LMS at its original location: [courses.jonbellah.com](https://courses.jonbellah.com).\n\nThe migration and cleanup process was actually quite fun: I migrated from Mongoose to Prisma, MongoDB to MySQL (hosted on [PlanetScale](https://planetscale.com/)),\nfrom PassportJS to [next-auth](https://next-auth.js.org) with magic link sign-in, and from a custom Stripe Elements implementation to a very hands-off Stripe Checkout\nprocess. I also finally moved all my remaining projects over to [Vercel](https://vercel.com/).\n\nI also took a little bit of time to redesign and relaunch [LearnStateMachines.com](https://learnstatemachines.com) as its own standalone course site again. There's been\na lot of movement on the [XState V5](https://github.com/statelyai/xstate/pull/898) PR and I still intend to release a new version of the course when that lands. I'm quite\nhappy with how the design turned out and am looking forward to dusting off that course again soon.\n\nIn the end, the best part was being able to delete _so_. _much_. _code_.\n\nNow things are much more clear and everything has its place. No more distractions. No more clutter.\n\n## What's next?\n\nFinally making the decision to throw away all that work actually feels pretty great. There was an immediate feeling of clarity, like a dam had been broken.\n\nAs for what's next, I'm going to continue putting work into the same projects that I have been... now just with more precise focus around the goals, objectives, and motivations.\n\n[BugCatcher](https://bugcatcher.io) is still in its early days \u0026mdash; having taken about a year of real time to do ~3 months of work, due to the aforementioned juggling\nof a freelance project \u0026mdash; but I'm very excited about the problem space and the people we're solving the problem for. We've got a lot of interesting work on the roadmap.\n\nAs for writing and teaching, I'm hesitant to promise that I'll be any better about publishing content more regularly. The truth is that I've always been terrible at building\na habit of writing or recording tutorials. I _will_ say that it's something I'm keen to improve on, though. One idea that I'm kicking around is to share some of the under-the-hood\nwork I'm doing on BugCatcher, either as pre-recorded videos or as a livestream. And, of course, releasing a new version of Learn State Machines once XState V5\nlands.\n\nLastly, I've got some pretty exciting career-related news that I'll be talking about more soon!\n",
+                                "data": {
+                                    "title": "A Renewed Sense of Focus",
+                                    "date": "2021-12-23T14:00:56.768Z",
+                                    "excerpt": "Last year, I announced the launch of a project called JSFoundry. Today, I'm announcing that I'm shutting it down.",
+                                    "category": {
+                                        "label": "Journal",
+                                        "slug": "journal"
+                                    }
+                                },
+                                "filePath": "renewed-focus.mdx"
+                            }
+                        ]
+                    },
+                    "__N_SSG": true
+                },
+                "page": "/",
+                "query": {
+                },
+                "buildId": "g02EWMu72aCr_H7Qjhru5",
+                "isFallback": false,
+                "gsp": true,
+                "scriptLoader": [
+                ]
+            }</script>
+    </body>
+</html>
